@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://BussinessService/" xmlns:ns1="http://DataService/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://BussinessService/">
+
+<xs:import namespace="http://DataService/" schemaLocation="http://localhost:38794/Business_Tier/BussinessService?xsd=1"/>
+
+<xs:element name="Addanimal" type="tns:Addanimal"/>
+
+<xs:element name="AddanimalResponse" type="tns:AddanimalResponse"/>
+
+<xs:element name="AdminLogin" type="tns:AdminLogin"/>
+
+<xs:element name="AdminLoginResponse" type="tns:AdminLoginResponse"/>
+
+<xs:element name="Animalsnames" type="tns:Animalsnames"/>
+
+<xs:element name="AnimalsnamesResponse" type="tns:AnimalsnamesResponse"/>
+
+<xs:element name="Deleteanimal" type="tns:Deleteanimal"/>
+
+<xs:element name="DeleteanimalResponse" type="tns:DeleteanimalResponse"/>
+
+<xs:element name="Searchanimals" type="tns:Searchanimals"/>
+
+<xs:element name="SearchanimalsResponse" type="tns:SearchanimalsResponse"/>
+
+<xs:element name="SendingMessage" type="tns:SendingMessage"/>
+
+<xs:element name="SendingMessageResponse" type="tns:SendingMessageResponse"/>
+
+<xs:element name="updateanimal" type="tns:updateanimal"/>
+
+<xs:element name="updateanimalResponse" type="tns:updateanimalResponse"/>
+
+<xs:complexType name="Addanimal">
+<xs:sequence>
+<xs:element name="animal" type="ns1:animal" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AddanimalResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateanimal">
+<xs:sequence>
+<xs:element name="animal" type="ns1:animal" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateanimalResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Searchanimals">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SearchanimalsResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:animal" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SendingMessage">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="subject" type="xs:string" minOccurs="0"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SendingMessageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Animalsnames">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="AnimalsnamesResponse">
+<xs:sequence>
+<xs:element name="return" type="ns1:animal" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Deleteanimal">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DeleteanimalResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AdminLogin">
+<xs:sequence>
+<xs:element name="admin" type="ns1:user" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AdminLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
